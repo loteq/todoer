@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: customFont-regular;
+	src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+html {
+	color-scheme: light;
+	--page-color: #f8f8f8;
+	--ink-color: #333;
+	--input-bg: #fff;
+	--border-color: #ccc;
+	--list-color: #e8e8e8;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+		--page-color: #282828;
+		--ink-color: #ccc;
+		--input-bg: #333;
+		--border-color: #555;
+		--list-color: #383838;
+	}
+}
+
+body {
+	background-color: var(--page-color);
+	color: var(--ink-color);
+	font-family: customFont-regular;
+	padding: 30px 20px;
+	font-size: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+input, button {
+	appearance: none;
+	font-family: inherit;
+	font-size: inherit;
+	padding: .5em .8em;
+	border-radius: .3em;
+	background-color: var(--input-bg);
+	color: inherit;
+	border: 1px solid var(--border-color);
+}
+
+button {
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+input {
+	width: 100%;
+}
+
+div {
+	display: flex;
+    flex-wrap: nowrap;
+	gap: 10px;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+li {
+	background-color: var(--list-color);
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	gap: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.done {
+	text-decoration: line-through;
+}
